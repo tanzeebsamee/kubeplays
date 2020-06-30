@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+   name: randomPV1
+spec:
+storageClassName: readyStorageClass
+capacity:
+   storage: 40Gi
+accessModes:
+   - ReadWriteOnce
+persistentVolumeReclaimPolicy: Recycle
+nfs:
+   path: <insert/path/to/share>
+   server: <insert_nfs_server_ip_or_name>
