@@ -1,0 +1,22 @@
+kind: ReplicaSet
+metadata: 
+  name : randomReplicaSet
+  
+  labels: 
+    env: dev
+    role: web
+spec: 
+  replicas: 3
+  selector: 
+    matchLabels:
+      role: web
+  template: 
+    metadata: 
+      labels: 
+        role: web
+  spec:
+    containers: 
+    - name: nginx
+      image: nginx
+      port: 
+      - containerPort: 80 
