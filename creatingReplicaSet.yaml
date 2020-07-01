@@ -1,23 +1,21 @@
 apiVersion: apps/v1
 kind: ReplicaSet
-metadata: 
-  name : randomreplicaset
-  
-  labels: 
-    env: dev
-    role: web
-spec: 
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  # modify replicas according to your case
   replicas: 3
-  selector: 
+  selector:
     matchLabels:
-      role: web
-  template: 
-    metadata: 
-      labels: 
-        role: web
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
     spec:
-      containers: 
-      - name: nginx
-        image: nginx
-        ports: 
-        - containerPort: 80 
+      containers:
+      - name: php-redis
+        image: gcr.io/google_samples/gb-frontend:v3
