@@ -1,6 +1,6 @@
 kind: ReplicaSet
 metadata: 
-  name : randomReplicaSet
+  name : randomreplicaset
   namespaces: development
   labels: 
     env: dev
@@ -18,5 +18,5 @@ spec:
     containers: 
     - name: nginx
       image: nginx
-      port: 
+      ports: 
       - containerPort: 80 
