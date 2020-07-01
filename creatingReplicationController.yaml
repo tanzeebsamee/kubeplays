@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: ReplicationController
+metadata:
+  name: randomReplicationContoller
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app : dev 
+    spec:
+      containers:
+      - name: nginx1
+        image: nginx
+        port : 
+        - containerPort: 80 
