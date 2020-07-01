@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata: 
-  name : randomReplicaSet
+  name : randomreplicaset
   
   labels: 
     env: dev
@@ -19,5 +19,5 @@ spec:
     containers: 
     - name: nginx
       image: nginx
-      port: 
+      ports: 
       - containerPort: 80 
