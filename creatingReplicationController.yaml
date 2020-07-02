@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: ReplicationController
 metadata:
-  name: randomReplicationContoller
+  name: randomreplicationcontoller
 spec:
   replicas: 3
   template:
